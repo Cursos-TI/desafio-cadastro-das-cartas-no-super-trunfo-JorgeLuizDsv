@@ -11,29 +11,62 @@ struct Carta {
 };
 
 int main() {
-    // Definindo a primeira carta
-    struct Carta carta1 = {
-        'A',
-        "A01",
-        "São Paulo",
-        12300000,
-        1521.11,
-        2.3,
-        15
-    };
+    struct Carta carta1, carta2;
 
-    // Definindo a segunda carta
-    struct Carta carta2 = {
-        'B',
-        "B02",
-        "Rio de Janeiro",
-        6748000,
-        1182.30,
-        1.5,
-        20
-    };
+    // Leitura dos dados da primeira carta
+    printf("Preencha os dados da CARTA 1:\n");
 
-    // Exibindo a primeira carta
+    printf("Estado (A-H): ");
+    scanf(" %c", &carta1.estado);
+
+    printf("Código (Ex: A01): ");
+    scanf("%s", carta1.codigo);
+
+    printf("Cidade: ");
+    scanf(" %[^\n]", carta1.cidade);
+
+    printf("População: ");
+    scanf("%d", &carta1.populacao);
+
+    printf("Área (em km²): ");
+    scanf("%f", &carta1.area);
+
+    printf("PIB (em bilhões): ");
+    scanf("%f", &carta1.pib);
+
+    printf("Pontos Turísticos: ");
+    scanf("%d", &carta1.pontos_turisticos);
+
+    printf("\n");
+
+    // Leitura dos dados da segunda carta
+    printf("Preencha os dados da CARTA 2:\n");
+
+    printf("Estado (A-H): ");
+    scanf(" %c", &carta2.estado);
+
+    printf("Código (Ex: B02): ");
+    scanf("%s", carta2.codigo);
+
+    printf("Cidade: ");
+    scanf(" %[^\n]", carta2.cidade);
+
+    printf("População: ");
+    scanf("%d", &carta2.populacao);
+
+    printf("Área (em km²): ");
+    scanf("%f", &carta2.area);
+
+    printf("PIB (em bilhões): ");
+    scanf("%f", &carta2.pib);
+
+    printf("Pontos Turísticos: ");
+    scanf("%d", &carta2.pontos_turisticos);
+
+    printf("\n");
+
+    // Exibição da primeira carta
+    printf("---------------------------\n");
     printf("CARTA 1\n");
     printf("Estado: %c\n", carta1.estado);
     printf("Código: %s\n", carta1.codigo);
@@ -42,9 +75,9 @@ int main() {
     printf("Área: %.2f km²\n", carta1.area);
     printf("PIB: %.2f bilhões\n", carta1.pib);
     printf("Pontos Turísticos: %d\n", carta1.pontos_turisticos);
-    printf("---------------------------\n");
 
-    // Exibindo a segunda carta
+    // Exibição da segunda carta
+    printf("---------------------------\n");
     printf("CARTA 2\n");
     printf("Estado: %c\n", carta2.estado);
     printf("Código: %s\n", carta2.codigo);
