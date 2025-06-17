@@ -12,6 +12,8 @@ struct Carta {
 
 int main() {
     struct Carta carta1, carta2;
+    float densidade1, densidade2;
+    float pib_per_capita1, pib_per_capita2;
 
     // Leitura dos dados da primeira carta
     printf("Preencha os dados da CARTA 1:\n");
@@ -88,5 +90,60 @@ int main() {
     printf("Pontos Turísticos: %d\n", carta2.pontos_turisticos);
     printf("---------------------------\n");
 
+  // Cálculos para a carta 1
+    densidade1 = carta1.populacao / carta1.area;
+    pib_per_capita1 = (carta1.pib * 1000000000) / carta1.populacao;
+
+    // Cálculos para a carta 2
+    densidade2 = carta2.populacao / carta2.area;
+    pib_per_capita2 = (carta2.pib * 1000000000) / carta2.populacao;
+
+    // Exibição da primeira carta
+    printf("---------------------------\n");
+    printf("CARTA 1\n");
+    printf("Estado: %c\n", carta1.estado);
+    printf("Código: %s\n", carta1.codigo);
+    printf("Cidade: %s\n", carta1.cidade);
+    printf("População: %d habitantes\n", carta1.populacao);
+    printf("Área: %.2f km²\n", carta1.area);
+    printf("PIB: %.2f bilhões\n", carta1.pib);
+    printf("Pontos Turísticos: %d\n", carta1.pontos_turisticos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+
+    // Exibição da segunda carta
+    printf("---------------------------\n");
+    printf("CARTA 2\n");
+    printf("Estado: %c\n", carta2.estado);
+    printf("Código: %s\n", carta2.codigo);
+    printf("Cidade: %s\n", carta2.cidade);
+    printf("População: %d habitantes\n", carta2.populacao);
+    printf("Área: %.2f km²\n", carta2.area);
+    printf("PIB: %.2f bilhões\n", carta2.pib);
+    printf("Pontos Turísticos: %d\n", carta2.pontos_turisticos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
+    printf("---------------------------\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return 0;
+    
 }
